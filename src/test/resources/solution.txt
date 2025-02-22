@@ -1,0 +1,12 @@
+public boolean isElementDeleteFromContactList(int quantityBeforeDelete) {
+        try {
+            List<WebElement> listEl = new WebDriverWait(driver, Duration.ofSeconds(10)).until(
+                    ExpectedConditions.numberOfElementsToBeLessThan(
+                            By.xpath("//div[@class='contact-item_card__2SOIM']"), quantityBeforeDelete));
+            System.out.println("after delete --> " + listEl.size());
+            return true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
