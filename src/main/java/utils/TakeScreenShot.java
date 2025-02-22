@@ -17,6 +17,11 @@ public class TakeScreenShot {
     public static void takeScreenShot(TakesScreenshot screenshot){
         String fileName = createFileName();
         File scrFile = screenshot.getScreenshotAs(OutputType.FILE);
+        File dir = new File("test_logs/screenshots");
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+
         try {
             Files.copy(scrFile, new File(fileName));
         } catch (IOException e) {
