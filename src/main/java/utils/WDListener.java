@@ -43,7 +43,7 @@ public class WDListener extends AbstractWebDriverEventListener {
     public void onException(Throwable throwable, WebDriver driver) {
         super.onException(throwable, driver);
         logger.info("created screenshot -->");
-        takeScreenShot((TakesScreenshot) driver);
+       // takeScreenShot((TakesScreenshot) driver);
     }
 
     @Override

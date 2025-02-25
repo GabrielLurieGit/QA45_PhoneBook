@@ -21,7 +21,7 @@ public class LoginTests extends ApplicationManager {
 
     @BeforeMethod(alwaysRun = true)
     public void registration(){
-        int i = new Random().nextInt(1000);
+        int i = new Random().nextInt(1000)+1000;
         email = "frodo_baggins_"+i+"@gmail.com";
         password = "Password123!";
         new HomePage(getDriver()).clickBtnLoginHeader();

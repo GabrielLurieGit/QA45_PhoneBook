@@ -17,7 +17,7 @@ public class RegistrationTests extends ApplicationManager {
 
     @Test(groups = "smoke")
     public void registrationPositiveTest(){
-        int i = new Random().nextInt(1000);
+        int i = new Random().nextInt(1000)+1000;
         new HomePage(getDriver()).clickBtnLoginHeader();
         new LoginPage(getDriver()).typeRegistrationForm("frodo_baggins_"+i+"@gmail.com",
                 "Password123!");
